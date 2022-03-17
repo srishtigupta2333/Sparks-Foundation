@@ -16,9 +16,9 @@ install.packages("ggplot2")
 library(ggplot2)
 ggplot(student_scores, aes(x = Hours,
                            y = Scores, 
-                           color = I("Blue"))) +
-  geom_point()
-
+                           color = I("Blue")))  +
+           geom_point()
+  
 ## using lm function for regression, to generate slope and intercept for the Data
 linear_model <- lm(Scores ~ Hours, data = student_scores)
 summary(linear_model)
@@ -40,8 +40,13 @@ View(student_scores)
 predict(linear_model, data.frame(Hours = 9.25))
 
 ## Plotting a bar plot of actual vs predicted scores ##
-barplot(student_scores$Scores, col = "blue")
-barplot(student_scores$Predicted, col = "red")
+barplot(student_scores$Scores, col = "blue",
+        main = "Actual Scores",
+        ylab = "Scores")
+barplot(student_scores$Predicted, col = "red", 
+        main = "Predicted Scores",
+        ylab = "Scores")
+
 
 ## we can verify this predicted value by equation of line i.e.,##
 ## y = intercept + x*slope ##
@@ -51,6 +56,3 @@ y
 
 ## Thus as seen from the model,##
 ## if a student studies 9.25hrs/day then he/she will get approximately 93 marks ##
-
-
-
