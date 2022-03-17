@@ -34,6 +34,7 @@ ggplot(student_scores, aes(x= Hours,
 
 ## Add prediction values in data ##
 student_scores$Predicted <- linear_model$fitted.values
+View(student_scores)
 
 ## Predict scores if a student studies for 9.25 hours a day ##
 predict(linear_model, data.frame(Hours = 9.25))
