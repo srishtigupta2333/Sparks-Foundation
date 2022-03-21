@@ -55,4 +55,4 @@ y = 2.483673 + 9.25*9.775803
 y
 
 ## Thus as seen from the model,##
-## if a student studies 9.25hrs/day then he/she will get approximately 93 marks ##
+## if a student studies 9.25hrs/day then he/she will get approximately 93 percent scores ##
